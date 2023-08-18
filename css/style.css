@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+  --color-dark: #19283F;
+  --color-green: #32D1CC;
+  --color-yellow: #FEC400;
+  --color-red: #FE304F;
+  --color-lite-green: #EFF7FA;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+}
+img{
+  max-width: 100%;
+}
+a{
+  text-decoration: none;
+}
+h1,h2,h3,h4,h5{
+  margin: 0;
+  padding: 0;
+}
+input:focus{
+  outline: none;
+}
+/* components */
+.main-button{
+  background-color: var(--color-red);
+  color: var(--color-yellow);
+  padding: 0.5rem 1rem;
+  display: block;
+  width: fit-content;
+}
+.sec-title::before{
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 3px;
+  background-color: var(--color-green);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* navbar */
+.navbar{
+  background-color: var(--color-dark);
+}
+.navbar .logo{
+  width: 100px;
+}
+.navbar .container .sand-icon{
+  color: white;
+}
+.navbar .container .navbar-toggler{
+  box-shadow: none;
+  border: 2px solid white;
+}
+.navbar .container .navbar-toggler[aria-expanded="true"]{
+  border-color: var(--color-green);
+}
+.navbar .container .navbar-nav .nav-link{
+  color: white;
+}
+.navbar .container .navbar-nav a{
+  font-weight: 700;
+}
+.navbar .container .navbar-nav .nav-link.active,
+.navbar .container .navbar-nav .nav-link:hover{
+  color: var(--color-green);
+}
+.navbar .container .navbar-nav .btn{
+  background-color: var(--color-red);
+  color: var(--color-yellow);
+}
+/* landing page */
+.landing{
+  background-color: var(--color-dark);
+  height: 100vh;
+}
+/* features */
+.features .container .feat .icon-holder{
+  height: 200px;
+}
+.features .container .feat .icon-holder .number,
+.features .container .feat .icon-holder .icon{
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .container .feat .icon-holder .number{
+  font-size: 12rem;
+  color: var(--color-lite-green);
+}
+.features .container .feat .icon-holder .icon{
+  color: var(--color-green);
+  font-size: 4rem;
+}
+.features .container .feat .feat-title{
+  color: var(--color-yellow);
+}
+/* portfolio */
+.portfolio{
+  background-color: var(--color-lite-green);
+}
+.portfolio ul li.active{
+  background-color: var(--color-red);
+  color: var(--color-yellow);
+}
+.portfolio ul li:hover:not(.active){
+  color: var(--color-red);
+}
+.portfolio .box{
+  padding: 5px;
+  overflow: hidden;
+}
+.portfolio .box::before{
+  content: attr(data-stuff);
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background-color: rgb(19% 82% 80%/0.7);
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  transform: translateX(calc(-100% - 5px));
+  transition: 0.5s;
+}
+.portfolio .box:hover::before{
+  transform: translateX(0);
+}
+/* stuff */
+.stuff .container .description{
+  max-width: 500px;
+}
+@media (max-width: 768px){
+  .stuff .container .info .button{
+    margin: auto;
+  }
+}
+/* team */
+.team{
+  background-color: var(--color-lite-green);
+}
+.team .container > h2{
+  color: var(--color-yellow);
+}
+.team .container .box h4{
+  background-color: var(--color-green);
+}
+/* project */
+.project{
+  background-color: var(--color-dark);
+}
+/* email */
+.email{
+  background-color: var(--color-yellow);
+}
+.email-input{
+  border: none;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid white;
+  color: white;
+}
+.email-input::placeholder{
+  color: white;
+}
+.email-button{
+  background-color: #685D29;
+  color: var(--color-yellow);
+}
+/* footer */
+footer{
+  background-color: var(--color-dark);
+}
+footer .logo-stuffs img{
+  width: 120px;
+}
+footer .logo-stuffs .designer{
+  color: var(--color-green);
+}
+footer .logo-stuffs .name{
+  color: var(--color-yellow);
+}
+footer .contact-us .sp-button{
+  background-color: var(--color-red);
+  color: var(--color-yellow);
+}
+footer .contact-us .icons .icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+footer .contact-us .icons .icon.facebook{
+  background-color: #1877F3;
+}
+footer .contact-us .icons .icon.twitter{
+  background-color: #1DA1F3;
+}
+footer .contact-us .icons .icon.linkedin{
+  background-color: #0076B4;
+}
+footer .contact-us .icons .icon.youtube{
+  background-color: red;
+}
